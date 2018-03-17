@@ -1,7 +1,8 @@
 
 
 import AuthAction from "../actions/authAction";
-
+import * as firebase from 'firebase'
+// let loginState = firebase.auth().currentUser !== undefined ? true : false;
 let AuthState = {
     loginShow : true,
     registerShow : false,

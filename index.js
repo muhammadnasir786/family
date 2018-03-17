@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import App from './App';
 import { store } from './src/store/index'
 
+
 class MainApplication extends React.Component {
     render(){
         return (

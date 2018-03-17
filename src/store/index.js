@@ -3,18 +3,25 @@ import { combineEpics, createEpicMiddleware } from 'redux-observable';
 
 //requiring all reducers
 import AuthReducer from './reducers/authReducer';
+import FTReducer from './reducers/FTReducer';
 
 //requiring all epics
 import AuthEpic from './epic/authEpic';
+// import { FTEpic } from './epic/authEpic';
 
 //combine epic
 const rootEpic = combineEpics(
     AuthEpic.createUser,
-    AuthEpic.loginUser
+    AuthEpic.loginUser ,
+    AuthEpic.addCircle,
+    AuthEpic.addMember,
+    AuthEpic.updateLocation,
+    AuthEpic.accepted,
+    AuthEpic.getUsers
 );
 //combine reducers
 const rootReducer = combineReducers({
-    AuthReducer
+    AuthReducer , FTReducer
 })
 
 //creating middleware
